@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "python-wasm-example"
+version = "0.1.0"
+description = "Python example for running WASM components"
+authors = ["Betty Blocks"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+wasmtime = "^29.0.0"
+
+[tool.poetry.scripts]
+execute = "main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api" 
