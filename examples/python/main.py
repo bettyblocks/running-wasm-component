@@ -105,12 +105,22 @@ class WasmRunner:
 class BettyBlocksRunner:
     """High-level interface for running Betty Blocks WASM components."""
 
-    def __init__(self):
+    def __init__(self, application_id: str = None, action_id: str = None):
         """Initialize the Betty Blocks runner."""
         self.wasm_runner = WasmRunner()
+        self.application_id = application_id
+        self.action_id = action_id
+
+    def __call__(self, input_data: Dict = None) -> Tuple[bool, str]:
+        if self.application_id is None or self.action_id is None:
+            raise ValueError(
+                "application_id and action_id must be set in constructor to use callable interface"
+            )
+
+        return self.run_single(self.application_id, self.action_id, input_data)
 
     def create_config(
-        self, application_id: str, action_id: str, input_data: Dict[str, Any] = None
+        self, application_id: str, action_id: str, input_data: Dict = None
     ) -> ComponentConfig:
         """Create a component configuration."""
         if input_data is None:
@@ -123,7 +133,7 @@ class BettyBlocksRunner:
         )
 
     def run_single(
-        self, application_id: str, action_id: str, input_data: Dict[str, Any] = None
+        self, application_id: str, action_id: str, input_data: Dict = None
     ) -> Tuple[bool, str]:
         """Run a single Betty Blocks component."""
         config = self.create_config(application_id, action_id, input_data)
@@ -132,13 +142,12 @@ class BettyBlocksRunner:
 
 def main():
     try:
-        runner = BettyBlocksRunner()
-
-        success, result = runner.run_single(
+        runner = BettyBlocksRunner(
             application_id="be3c7dec126547c5bdb1870ca9d86778",
             action_id="7c33a2b6355545338b536a4863486d97",
-            input_data={},
         )
+
+        success, result = runner({})
 
         if success:
             print(f"Result: {result}")
