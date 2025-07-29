@@ -5,7 +5,10 @@ A simplified Python wrapper for running Betty Blocks WASM components using the w
 ## Prerequisites
 
 - Python 3.9 or higher
-- Wasmtime CLI (install with `brew install wasmtime`)
+- Wasmtime CLI - see [official installation guide](https://docs.wasmtime.dev/cli-install.html) for your platform:
+  - **Linux/macOS**: `curl https://wasmtime.dev/install.sh -sSf | bash`
+  - **macOS**: `brew install wasmtime` 
+  - **Windows**: Download MSI installer from releases page
 - A Betty Blocks WebAssembly component file (`app.wasm`)
 
 ## Quick Start

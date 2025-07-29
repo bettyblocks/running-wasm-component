@@ -146,7 +146,7 @@ class WasmRunner:
         if not shutil.which(self.CLI_TOOL):
             raise WasmEnvironmentError(
                 f"{self.CLI_TOOL} CLI not found. "
-                f"Install with: brew install {self.CLI_TOOL}"
+                f"Install from: https://docs.wasmtime.dev/cli-install.html"
             )
 
         self.logger.info("Environment validated", extra={"cli_tool": self.CLI_TOOL})
@@ -161,7 +161,7 @@ class WasmRunner:
             Properly formatted invoke expression
         """
         # Sanitize payload input to prevent injection
-        payload_input = json.dumps(config.payload.get("input", "{}"))
+        payload_input = json.dumps(config.payload.get("input", {}))
 
         return (
             f"call({{"
