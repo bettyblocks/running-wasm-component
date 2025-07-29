@@ -17,25 +17,19 @@ A simplified Python wrapper for running Betty Blocks WASM components using the w
 
 ## Usage
 
-### Basic Example
-
 ```python
-from main import BettyBlocksRunner
-
-# Create runner
-runner = BettyBlocksRunner()
-
-# Execute component
-success, output = runner.run_single(
+# Create runner with app and action IDs
+runner = BettyBlocksRunner(
     application_id="be3c7dec126547c5bdb1870ca9d86778",
-    action_id="7c33a2b6355545338b536a4863486d97",
-    input_data={"score": 21.3}
+    action_id="7c33a2b6355545338b536a4863486d97"
 )
 
+success, result = runner({"score": 21.3})
+
 if success:
-    print(f"Success: {output}")
+    print(f"Success: {result}")
 else:
-    print(f"Error: {output}")
+    print(f"Error: {result}")
 ```
 
 ## Current Limitations
