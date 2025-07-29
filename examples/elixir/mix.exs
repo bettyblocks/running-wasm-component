@@ -24,7 +24,8 @@ defmodule WasmExample.MixProject do
     [
       {:wasmex,
        git: "https://github.com/tessi/wasmex.git", rev: "e8d2f63cdf278ced11720cc58d93f96f72cb9872"},
-      {:styler, "~> 1.4", only: [:dev, :test], runtime: false}
+      {:styler, "~> 1.4", only: [:dev, :test], runtime: false},
+      {:jason, "~> 1.4"}
     ]
   end
 end
