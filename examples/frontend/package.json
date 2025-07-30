@@ -1,0 +1,24 @@
+{
+  "name": "typescript",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "execute": "bun index.ts",
+    "transpile": "bunx @bytecodealliance/jco transpile -o dist --no-nodejs-compat app.wasm",
+    "bundle": "bun build index.html --outdir=dist",
+    "transpile-and-bundle": "bun run transpile && bun run bundle"
+  },
+  "dependencies": {
+    "@bytecodealliance/preview2-shim": "^0.17.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react-dom": "^19.1.7"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
