@@ -22,8 +22,7 @@ defmodule WasmExample.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:wasmex,
-       git: "https://github.com/tessi/wasmex.git", rev: "e8d2f63cdf278ced11720cc58d93f96f72cb9872"},
+      {:wasmex, "~> 0.12"},
       {:styler, "~> 1.4", only: [:dev, :test], runtime: false},
       {:jason, "~> 1.4"}
     ]
