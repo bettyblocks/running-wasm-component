@@ -9,7 +9,7 @@ A simplified Python wrapper for running Betty Blocks WASM components using the w
   - **Linux/macOS**: `curl https://wasmtime.dev/install.sh -sSf | bash`
   - **macOS**: `brew install wasmtime` 
   - **Windows**: Download MSI installer from releases page
-- A Betty Blocks WebAssembly component file (`app.wasm`)
+- A Betty Blocks WebAssembly component file (`app.wasm`) located at the root of this folder
 
 ## Quick Start
 
@@ -27,7 +27,8 @@ runner = BettyBlocksRunner(
     action_id="7c33a2b6355545338b536a4863486d97"
 )
 
-success, result = runner({"score": 21.3})
+# Call the runner with input data for the WASM component
+success, result = runner({"score": 21.3}) 
 
 if success:
     print(f"Success: {result}")

@@ -479,8 +479,8 @@ class BettyBlocksRunner:
 def main() -> None:
     try:
         runner = BettyBlocksRunner(
-            application_id="be3c7dec126547c5bdb1870ca9d86778",
-            action_id="7c33a2b6355545338b536a4863486d97",
+            application_id="<YOUR_APPLICATION_ID>",
+            action_id="<YOUR_ACTION_ID>",
         )
 
         success, result = runner({})
