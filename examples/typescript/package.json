@@ -1,0 +1,24 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun run transpile && rsbuild build",
+    "dev": "bun run transpile && rsbuild dev --open",
+    "serve": "rsbuild serve",
+    "transpile": "npx @bytecodealliance/jco transpile -o wasm --no-nodejs-compat app.wasm"
+  },
+  "dependencies": {
+    "@bytecodealliance/preview2-shim": "^0.17.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^1.4.13",
+    "@rsbuild/plugin-react": "^1.3.4",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "typescript": "^5.9.2"
+  }
+}
