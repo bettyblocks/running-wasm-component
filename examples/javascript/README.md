@@ -1,6 +1,6 @@
-# typescript
+# Javascript
 
-This example demonstrates how to run a WebAssembly component using TypeScript and Bun. It uses the `@bytecodealliance/preview2-shim` package to provide the necessary runtime environment for WebAssembly components.
+This example demonstrates how to run a WebAssembly component using Javascript and Bun. It uses the `@bytecodealliance/preview2-shim` package to provide the necessary runtime environment for WebAssembly components.
 
 pre-requirements:
 
@@ -8,7 +8,7 @@ pre-requirements:
 - You need to have a WebAssembly component ready to be used. This can be downloaded from the Betty Blocks wasm builder.
 - Make sure you have the action ID and application ID for your Betty Blocks application, as these will be required to call the actions in the WebAssembly component.
 
-# Running a WebAssembly Component with TypeScript and Bun
+# Running a WebAssembly Component with Javascript and Bun
 
 ## Setup
 
@@ -46,7 +46,7 @@ The `actions` import is the main entry point to run all the actions of your Bett
 
 ## Example Code
 
-```typescript
+```javascript
 import { actions } from "./dist/app.js";
 
 const output = actions.call({
