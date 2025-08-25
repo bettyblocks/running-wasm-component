@@ -2,7 +2,7 @@ defmodule WasmExample.Application do
   @moduledoc false
   use Application
 
-  @wasm_path "./app.wasm"
+  @wasm_path "./actions.wasm"
 
   @impl true
   def start(_type, _args) do

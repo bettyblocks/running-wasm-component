@@ -16,5 +16,5 @@ dist/
 .idea
 
 # Betty Blocks WebAssembly component
-app.wasm
+actions.wasm
 wasm/

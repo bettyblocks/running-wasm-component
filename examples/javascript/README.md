@@ -20,7 +20,7 @@ bun install
 
 ## Transpiling the WebAssembly Component
 
-Before transpiling the WebAssembly component, ensure that you added the WebAssembly component file (e.g., `app.wasm`) to the root of this example directory. This file should be the same file name used in the transpile script of `package.json`.
+Before transpiling the WebAssembly component, ensure that you added the WebAssembly component file (e.g., `actions.wasm`) to the root of this example directory. This file should be the same file name used in the transpile script of `package.json`.
 
 secondly, you need to transpile the WebAssembly component to a format that Bun can execute. This is done using the `@bytecodealliance/jco` tool.
 

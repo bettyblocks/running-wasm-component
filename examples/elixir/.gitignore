@@ -26,4 +26,4 @@ wasm_example-*.tar
 /tmp/
 
 # wasm file
-app.wasm
+actions.wasm

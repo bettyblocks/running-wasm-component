@@ -277,7 +277,7 @@ class BettyBlocksRunner:
         self,
         application_id: Optional[str] = None,
         action_id: Optional[str] = None,
-        wasm_file: str = "app.wasm",
+        wasm_file: str = "actions.wasm",
         timeout: int = 30,
         log_level: str = "INFO",
     ) -> None:

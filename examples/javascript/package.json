@@ -9,7 +9,7 @@
   },
   "scripts": {
     "execute": "node index.js",
-    "transpile": "npx @bytecodealliance/jco transpile -o dist app.wasm"
+    "transpile": "npx @bytecodealliance/jco transpile -o dist actions.wasm"
   },
   "dependencies": {
     "@bytecodealliance/preview2-shim": "^0.17.2"
