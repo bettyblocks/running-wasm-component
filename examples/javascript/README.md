@@ -30,7 +30,7 @@ bun run transpile
 
 ## Configure the action you want to run
 
-In [index.js](examples/javascript/index.js), specify application ID and the action ID of the action you want to run.
+In [index.js](https://github.com/bettyblocks/running-wasm-component/blob/main/examples/javascript/index.js), specify application ID and the action ID of the action you want to run.
 
 ```javascript
 import { actions } from "./dist/app.js";
