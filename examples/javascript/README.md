@@ -28,6 +28,22 @@ secondly, you need to transpile the WebAssembly component to a format that Bun c
 bun run transpile
 ```
 
+## Configure the action you want to run
+
+In [index.js](examples/javascript/index.js), specify application ID and the action ID of the action you want to run.
+
+```javascript
+import { actions } from "./dist/app.js";
+
+const output = actions.call({
+  actionId: "<<YOUR_ACTION_ID>>", // Replace with your actual action ID
+  applicationId: "<<YOUR_APPLICATION_ID>>", // Replace with your actual application UUID
+  payload: {
+    input: JSON.stringify({}),
+  },
+});
+```
+
 ## Running the Example
 
 To run the example, execute the following command:
