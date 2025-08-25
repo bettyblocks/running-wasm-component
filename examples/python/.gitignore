@@ -37,7 +37,7 @@ venv.bak/
 *~
 
 # Betty Blocks WebAssembly component
-app.wasm
+actions.wasm
 
 # OS
 .DS_Store

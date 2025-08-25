@@ -7,7 +7,7 @@
     "build": "bun run transpile && rsbuild build",
     "dev": "bun run transpile && rsbuild dev --open",
     "serve": "rsbuild serve",
-    "transpile": "npx @bytecodealliance/jco transpile -o wasm --no-nodejs-compat app.wasm"
+    "transpile": "npx @bytecodealliance/jco transpile -o wasm --no-nodejs-compat actions.wasm"
   },
   "dependencies": {
     "@bytecodealliance/preview2-shim": "^0.17.2",

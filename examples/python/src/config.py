@@ -23,7 +23,7 @@ class ComponentConfig:
     application_id: str
     action_id: str
     payload: Dict[str, Any]
-    wasm_file: str = "app.wasm"
+    wasm_file: str = "actions.wasm"
     timeout: int = 30
 
     def __post_init__(self) -> None:

@@ -7,9 +7,9 @@ A simplified Python wrapper for running Betty Blocks WASM components using the w
 - Python 3.9 or higher
 - Wasmtime CLI - see [official installation guide](https://docs.wasmtime.dev/cli-install.html) for your platform:
   - **Linux/macOS**: `curl https://wasmtime.dev/install.sh -sSf | bash`
-  - **macOS**: `brew install wasmtime` 
+  - **macOS**: `brew install wasmtime`
   - **Windows**: Download MSI installer from releases page
-- A Betty Blocks WebAssembly component file (`app.wasm`) located at the root of this folder
+- A Betty Blocks WebAssembly component file (`actions.wasm`) located at the root of this folder
 
 ## Quick Start
 
@@ -28,7 +28,7 @@ runner = BettyBlocksRunner(
 )
 
 # Call the runner with input data for the WASM component
-success, result = runner({"score": 21.3}) 
+success, result = runner({"score": 21.3})
 
 if success:
     print(f"Success: {result}")
@@ -39,6 +39,7 @@ else:
 ## Current Limitations
 
 This example uses the wasmtime CLI approach because:
+
 - WASI Preview 2 components with imported resources aren't fully supported in wasmtime-py yet
 - The CLI approach is more mature and reliable for complex components
-- Direct Python bindings will be available as wasmtime-py improves 
+- Direct Python bindings will be available as wasmtime-py improves
